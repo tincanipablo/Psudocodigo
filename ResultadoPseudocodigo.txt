@@ -56,4 +56,4 @@ def solucionarRompecabezas(N):
 # Ejemplos de salida:
 print(solucionarRompecabezas(10))  # 580441
 print(solucionarRompecabezas(100))  # 8042318513
-# para solucionarRompecabezas(2023**100) no lo calculamos directamente aquí por la complejidad
+# para solucionarRompecabezas(2023**100) # esperando el resultado el calculo en mi maquina lleva tiempo 
