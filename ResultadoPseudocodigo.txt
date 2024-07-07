@@ -1,5 +1,9 @@
-Para resolver el pseudocódigo proporcionado, veamos paso a paso cómo varían las variables var_A, var_B, var_C y var_D en cada iteración del bucle para un valor de NNN.
-Vamos a calcular la salida para solucionarRompecabezas(10), solucionarRompecabezas(100) y solucionarRompecabezas(2023^100).
+Para resolver el pseudocódigo proporcionado, veamos paso a paso cómo varían las variables 
+var_A, var_B, var_C y var_D en cada iteración del bucle para un valor de NNN.
+Vamos a calcular la salida para 
+solucionarRompecabezas(10), 
+solucionarRompecabezas(100) y 
+solucionarRompecabezas(2023^100).
 
 Pseudocódigo explicado:
 1.	Inicializamos las variables: var_A = 1, var_B = 1, var_C = 1, var_D = 1.
