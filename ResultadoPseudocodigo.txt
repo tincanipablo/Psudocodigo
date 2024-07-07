@@ -5,36 +5,37 @@ Pseudocódigo explicado:
 1.	Inicializamos las variables: var_A = 1, var_B = 1, var_C = 1, var_D = 1.
 2.	Iteramos de 1 a N.
 3.	En cada iteración, calculamos resultado y actualizamos las variables como sigue:
-o	resultado = 3 * var_D + 1 * var_C + 4 * var_B + 1 * var_A
-o	var_A = var_B
-o	var_B = var_C
-o	var_C = var_D
-o	var_D = resultado
+	resultado = 3 * var_D + 1 * var_C + 4 * var_B + 1 * var_A
+	var_A = var_B
+	var_B = var_C
+	var_C = var_D
+	var_D = resultado
 4.	Devolvemos var_D % 10000000000 (los últimos 10 dígitos de var_D).
 
 Ejemplo:
 Para N = 10:
-•	Iteraciones:
-o	i=1i = 1i=1: resultado = 3*1 + 1*1 + 4*1 + 1*1 = 9, var_A=1, var_B=1, var_C=1, var_D=9
-o	i=2i = 2i=2: resultado = 3*9 + 1*1 + 4*1 + 1*1 = 31, var_A=1, var_B=1, var_C=9, var_D=31
-o	i=3i = 3i=3: resultado = 3*31 + 1*9 + 4*1 + 1*1 = 107, var_A=1, var_B=9, var_C=31, var_D=107
-o	i=4i = 4i=4: resultado = 3*107 + 1*31 + 4*9 + 1*1 = 363, var_A=9, var_B=31, var_C=107, var_D=363
-o	i=5i = 5i=5: resultado = 3*363 + 1*107 + 4*31 + 1*9 = 1237, var_A=31, var_B=107, var_C=363, var_D=1237
-o	i=6i = 6i=6: resultado = 3*1237 + 1*363 + 4*107 + 1*31 = 4223, var_A=107, var_B=363, var_C=1237, var_D=4223
-o	i=7i = 7i=7: resultado = 3*4223 + 1*1237 + 4*363 + 1*107 = 14463, var_A=363, var_B=1237, var_C=4223, var_D=14463
-o	i=8i = 8i=8: resultado = 3*14463 + 1*4223 + 4*1237 + 1*363 = 49573, var_A=1237, var_B=4223, var_C=14463, var_D=49573
-o	i=9i = 9i=9: resultado = 3*49573 + 1*14463 + 4*4223 + 1*1237 = 169591, var_A=4223, var_B=14463, var_C=49573, var_D=169591
-o	i=10i = 10i=10: resultado = 3*169591 + 1*49573 + 4*14463 + 1*4223 = 580441, var_A=14463, var_B=49573, var_C=169591, var_D=580441
-Salida: 580441580441580441
+Iteraciones:
+	i=1i = 1i=1: resultado = 3*1 + 1*1 + 4*1 + 1*1 = 9, var_A=1, var_B=1, var_C=1, var_D=9
+	i=2i = 2i=2: resultado = 3*9 + 1*1 + 4*1 + 1*1 = 31, var_A=1, var_B=1, var_C=9, var_D=31
+	i=3i = 3i=3: resultado = 3*31 + 1*9 + 4*1 + 1*1 = 107, var_A=1, var_B=9, var_C=31, var_D=107
+	i=4i = 4i=4: resultado = 3*107 + 1*31 + 4*9 + 1*1 = 363, var_A=9, var_B=31, var_C=107, var_D=363
+	i=5i = 5i=5: resultado = 3*363 + 1*107 + 4*31 + 1*9 = 1237, var_A=31, var_B=107, var_C=363, var_D=1237
+	i=6i = 6i=6: resultado = 3*1237 + 1*363 + 4*107 + 1*31 = 4223, var_A=107, var_B=363, var_C=1237, var_D=4223
+	i=7i = 7i=7: resultado = 3*4223 + 1*1237 + 4*363 + 1*107 = 14463, var_A=363, var_B=1237, var_C=4223, var_D=14463
+	i=8i = 8i=8: resultado = 3*14463 + 1*4223 + 4*1237 + 1*363 = 49573, var_A=1237, var_B=4223, var_C=14463, var_D=49573
+	i=9i = 9i=9: resultado = 3*49573 + 1*14463 + 4*4223 + 1*1237 = 169591, var_A=4223, var_B=14463, var_C=49573, var_D=169591
+	i=10i = 10i=10: resultado = 3*169591 + 1*49573 + 4*14463 + 1*4223 = 580441, var_A=14463, var_B=49573, var_C=169591, var_D=580441
+Salida: 580441
+
 Para N = 100:
 Realizando la iteración 100 veces, obtendremos un valor muy grande. Solo calculamos el módulo 10^10 del resultado final.
 
-
-Salida: \( 8042318513 \)
+Salida:  8042318513
 Para N = 20231002023^{100}2023100:
 Dado el gran tamaño de 20231002023^{100}2023100, el patrón y los valores se vuelven muy grandes, pero calculamos el módulo 10^10 del resultado final.
 
 Salida: Los últimos 10 dígitos de `var_D`.
+
 En python
 def solucionarRompecabezas(N):
     var_A = 1
