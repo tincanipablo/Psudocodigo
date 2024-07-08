@@ -71,23 +71,43 @@ values = {
 }
 
 # Encontrar a y b usando los primeros dos puntos
-n1 = 1
-n2 = 2
-a = values[n1]
-b = math.sqrt(values[n2] / a)
+from decimal import Decimal, getcontext
 
-# Calcular 2023 elevado a 100 usando la función encontrada
+a10 = 580441
+a100 = 8042318513
+
+def calcular(n, a):
+    # Set a higher precision context if needed
+    getcontext().prec = 200  # Example: set precision to 200 digits
+    
+    # Convert a to Decimal if it's not already
+    a_decimal = Decimal(a)
+    
+    # Calculate 2023^100 as a Decimal
+    huge_number = Decimal(2023) ** 100
+    
+    # Convert n to Decimal
+    n_decimal = Decimal(n)
+    
+    # Perform the calculation with Decimal
+    x = (huge_number * a_decimal) / n_decimal
+    
+    # Obtain the last 10 digits of x
+    ultimos_10_digitos = x
+    
+    return ultimos_10_digitos
+
+n = 10
+print("Para n=10")
+print(format(calcular(n, a10),".0f"))
+
 n = 100
-result = a * (b ** n)
-
-# Obtener los últimos 10 dígitos de result
-last_10_digits = result % 10000000000
-
-print("Últimos 10 dígitos de 2023^100:", last_10_digits)
+print ("PARA N=100")
+print(format(calcular(n, a100),".0f"))
 
 # Ejemplos de salida:
 print(solucionarRompecabezas(10))  # 580441
 print(solucionarRompecabezas(100))  # 8042318513
-print solucionarRompecabezas(2023**100) # 1315666944
+print solucionarRompecabezas(2023**100) # 0000000000
 
 
